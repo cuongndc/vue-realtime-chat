@@ -5,15 +5,19 @@ import 'firebase/firestore'
 import Filter from 'bad-words'
 import { ref, onUnmounted, computed } from 'vue'
 
-firebase.initializeApp({
-  apiKey: 'AIzaSyAJZ2X1xZEiQ8kFJxjH7qPknhA4aF9y9bY',
-  authDomain: 'vue-chat-app-27d21.firebaseapp.com',
-  projectId: 'vue-chat-app-27d21',
-  storageBucket: 'vue-chat-app-27d21.appspot.com',
-  messagingSenderId: '223042471176',
-  appId: '1:223042471176:web:7a12ed657e072e21b618bd',
-  measurementId: 'G-6N52LNM6YL'
-})
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyB4K-fzyA9hTSPDLVX7CS3YkZGcpHz3E6g",
+  authDomain: "app-chat-firebase-ed9e8.firebaseapp.com",
+  databaseURL: "https://app-chat-firebase-ed9e8-default-rtdb.firebaseio.com",
+  projectId: "app-chat-firebase-ed9e8",
+  storageBucket: "app-chat-firebase-ed9e8.appspot.com",
+  messagingSenderId: "480312369607",
+  appId: "1:480312369607:web:59a8780f45e7789696b9e2",
+  measurementId: "G-F0MWKMT3VF"
+};
+
+firebase.initializeApp(firebaseConfig)
 
 const auth = firebase.auth()
 
